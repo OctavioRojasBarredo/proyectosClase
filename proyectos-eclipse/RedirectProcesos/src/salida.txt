@@ -1,0 +1,15 @@
+ El volumen de la unidad C no tiene etiqueta.
+ El n£mero de serie del volumen es: 7C24-AED0
+
+ Directorio de C:\Users\nerwi\Desktop\proyectos\proyectos-eclipse\RedirectProcesos
+
+02/10/2024  14:16    <DIR>          .
+02/10/2024  14:16    <DIR>          ..
+02/10/2024  14:16               328 .classpath
+02/10/2024  14:16                 6 .gitignore
+02/10/2024  14:16               392 .project
+02/10/2024  14:16    <DIR>          .settings
+02/10/2024  14:16    <DIR>          bin
+02/10/2024  14:21    <DIR>          src
+               3 archivos            726 bytes
+               5 dirs  29.269.090.304 bytes libres

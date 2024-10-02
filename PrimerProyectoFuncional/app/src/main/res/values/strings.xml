@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PrimerProyectoFuncional</string>
+    <string name="botonIzquierda">Button</string>
+    <string name="botonDerecha">Button</string>
+    <string name="nombre">Name</string>
+    <string name="mostrarNombre">mostrarNombre</string>
+</resources>
