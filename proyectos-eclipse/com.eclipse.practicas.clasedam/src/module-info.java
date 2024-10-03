@@ -1,2 +1,2 @@
-module com.eclipse.practicas.clasedam {
+module BaseDeDatoss {
 }

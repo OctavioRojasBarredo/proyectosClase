@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="com.eclipse.practicas.clasedam/src"/>
+	<classpathentry kind="src" path="com.eclipse.practicas.convirtiendoATerminosInformáticosss/src"/>
+	<classpathentry kind="src" path="com.eclipse.practicas.holamundo/src"/>
+	<classpathentry kind="src" path="com.eclipse.practicas.junitbasico/src"/>
+	<classpathentry kind="src" path="com.eclipse.practicas.junitbasico/test"/>
+	<classpathentry kind="src" path="com.eclipse.practicas.probandopaquetes/src"/>
+	<classpathentry kind="src" path="Concatenar/src"/>
+	<classpathentry kind="src" path="Consesionario/src"/>
+	<classpathentry kind="src" path="Copiar100/src"/>
+	<classpathentry kind="src" path="ejemploProcesos2/src"/>
+	<classpathentry kind="src" path="ejercicio1.moviles/src"/>
+	<classpathentry kind="src" path="Ejercicio2/src"/>
+	<classpathentry kind="src" path="Ejercicio3Hospitales/src"/>
+	<classpathentry kind="src" path="leerEscribirBinarios/src"/>
+	<classpathentry kind="src" path="leerFicheros/src"/>
+	<classpathentry excluding="src/" kind="src" path="listar.archivos"/>
+	<classpathentry kind="src" path="listar.archivos/src"/>
+	<classpathentry kind="src" path="pruebaProcesos/src"/>
+	<classpathentry kind="src" path="RedirectProcesos/src"/>
+	<classpathentry kind="output" path="Consesionario/bin"/>
+</classpath>
