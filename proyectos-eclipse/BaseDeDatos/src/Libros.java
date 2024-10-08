@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -14,6 +15,20 @@ public class Libros implements Serializable {
 
 	public static void main(String[] args) throws IOException{
 		try {
+=======
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+import java.util.ArrayList;
+
+public class Libros implements Serializable{
+	ArrayList<infoLibros> libros = new ArrayList<>();
+	
+	public static void main(String[] args) throws IOException{
+>>>>>>> 39f6e8e0fe9254352c74cc094dfbab9cd30069ff
 		File f = new File("Peliculas.dat");
 		f.createNewFile();
 		
@@ -26,6 +41,7 @@ public class Libros implements Serializable {
 		int[] duracion = {135, 135, 87};
 		
 		for (int i=0; i<titulos.length; i++) {
+<<<<<<< HEAD
 			infoLibros libro = new infoLibros(titulos[i], fecha[i], precio[i], duracion[i]);
 			System.out.printf("Titulos: %s, Fecha: %s, Precio: %.2f, Duracion: %d \n", titulos[i], fecha[i], precio[i], duracion[i]);
 			dataOS.writeObject(libro);
@@ -34,5 +50,17 @@ public class Libros implements Serializable {
 		} catch (IndexOutOfBoundsException e) {
 			System.out.println();
 	}
+=======
+			if (i == 0) {
+				System.out.println("Titulo |-----| Fecha |-----| Precio |-----| Duración");
+				dataOS.writeUTF("Titulo |-----| Fecha |-----| Precio |-----| Duración");
+			}
+			infoLibros libro = new infoLibros(titulos[i], fecha[i], precio[i], duracion[i]);
+			System.out.println(libro);
+			dataOS.writeObject(libro);
+		}
+		dataOS.close();
+		
+>>>>>>> 39f6e8e0fe9254352c74cc094dfbab9cd30069ff
 	}
 }

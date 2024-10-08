@@ -2,6 +2,10 @@ import java.io.*;
 
 public class Copiar100 {
 	public static void main(String[] args) throws IOException {
+<<<<<<< HEAD
+=======
+		System.out.println(args[0]);
+>>>>>>> 39f6e8e0fe9254352c74cc094dfbab9cd30069ff
 		try {
 		File archivoCopiar = new File(args[0]+"Mifichero.txt");
 		File archivoPegar = new File(args[0]+"copiarMifichero.txt");
@@ -74,8 +78,11 @@ public class Copiar100 {
 		
 		lector.close();
 		escritor.close();
+<<<<<<< HEAD
 		} catch (FileNotFoundException e) {
 			System.out.println("El archivo no se encontró");
+=======
+>>>>>>> 39f6e8e0fe9254352c74cc094dfbab9cd30069ff
 		} catch (IOException ioe) {
 			System.out.println("Has introducido incorrectamente la ruta");
 		} catch (ArrayIndexOutOfBoundsException aio){
