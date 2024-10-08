@@ -18,11 +18,11 @@ public class Controlador implements View.OnClickListener {
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.botonIzq) {
-            mostrarNombre.setText(nombre.getText().toString());
+            cambiarTexto();
         }
 
         if (view.getId() == R.id.botonDer) {
-                mostrarNombre.setText("");
+
         }
     }
 }

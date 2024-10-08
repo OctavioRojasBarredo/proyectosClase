@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     private Controlador controlador;
 
     @Override
+
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
@@ -45,4 +47,12 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
     }
+    public void cambiarTexto() {
+        mostrarNombre.setText(nombre.getText().toString());
+    }
+
+    public void resetearTexto() {
+        mostrarNombre.setText("");
+    }
 }
+
