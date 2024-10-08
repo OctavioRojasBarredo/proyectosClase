@@ -20,17 +20,29 @@ public class MainActivity extends AppCompatActivity {
 
     private Controlador controlador;
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
+
+        // Inicializa las vistas
+        botonIzquierda = findViewById(R.id.botonIzq);
+        botonDerecha = findViewById(R.id.botonDer);
+        mostrarNombre = findViewById(R.id.mostrarNombre);
+        nombre = findViewById(R.id.nombre);
+
+        // Crea una instancia del Controlador, pasándole las vistas necesarias
+        controlador = new Controlador(mostrarNombre, nombre);
+
+        // Asigna el controlador a los botones
+        botonIzquierda.setOnClickListener(controlador);
+        botonDerecha.setOnClickListener(controlador);
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
-    botonIzquierda.findViewById(R.id.botonIzq);
-    botonIzquierda.setOnClickListener();
     }
 }
