@@ -13,6 +13,7 @@ public class Libros implements Serializable {
 	ArrayList<infoLibros> libros = new ArrayList<>();
 
 	public static void main(String[] args) throws IOException{
+		try {
 		File f = new File("Peliculas.dat");
 		f.createNewFile();
 		
@@ -30,6 +31,8 @@ public class Libros implements Serializable {
 			dataOS.writeObject(libro);
 		}
 		dataOS.close();
-		
+		} catch (IndexOutOfBoundsException e) {
+			System.out.println();
+	}
 	}
 }
