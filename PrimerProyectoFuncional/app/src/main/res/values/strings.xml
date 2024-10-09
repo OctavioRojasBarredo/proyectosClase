@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">PrimerProyectoFuncional</string>
-    <string name="botonIzquierda">Button</string>
-    <string name="botonDerecha">Button</string>
+    <string name="botonIzq">Button</string>
+    <string name="botonDer">Button</string>
     <string name="nombre">Name</string>
     <string name="mostrarNombre">mostrarNombre</string>
+    <string name="Guardar">Guardar</string>
+    <string name="Borrar">Borrar</string>
 </resources>
