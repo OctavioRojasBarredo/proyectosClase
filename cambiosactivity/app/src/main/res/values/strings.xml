@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CambiosActivity</string>
+    <string name="activity_principal">Activity principal</string>
+    <string name="boton_principal">Botón principal</string>
+    <string name="Boton_secundario">Boton secundario</string>
+    <string name="vista_secundaria">Vista secundaria</string>
+</resources>
