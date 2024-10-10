@@ -5,8 +5,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -28,6 +30,15 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        if(getSupportActionBar()!=null){
+            getSupportActionBar().setTitle("Icono");
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setIcon(R.mipmap.ic_peppino);
+        }
+
         // Inicializa las vistas
         botonIzquierda = findViewById(R.id.botonIzq);
         botonDerecha = findViewById(R.id.botonDer);
@@ -35,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         nombre = findViewById(R.id.nombre);
 
         // Crea una instancia del Controlador, pasándole las vistas necesarias
-        controlador = new Controlador(mostrarNombre, nombre);
+        controlador = new Controlador(this);
 
         // Asigna el controlador a los botones
         botonIzquierda.setOnClickListener(controlador);
