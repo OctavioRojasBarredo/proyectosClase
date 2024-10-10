@@ -8,21 +8,21 @@ public class Controlador implements View.OnClickListener {
 
     private TextView mostrarNombre;
     private EditText nombre;
+    private MainActivity activity;
 
     // Constructor que recibe las vistas que necesitas controlar
-    public Controlador(TextView mostrarNombre, EditText nombre) {
-        this.mostrarNombre = mostrarNombre;
-        this.nombre = nombre;
+    public Controlador(MainActivity activity) {
+        this.activity = activity;
     }
 
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.botonIzq) {
-            cambiarTexto();
+            activity.cambiarTexto();
         }
 
         if (view.getId() == R.id.botonDer) {
-
+            activity.resetearTexto();
         }
     }
 }

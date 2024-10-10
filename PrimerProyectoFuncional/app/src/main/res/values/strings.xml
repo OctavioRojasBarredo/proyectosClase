@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PrimerProyectoFuncional</string>
+    <string name="app_name">App</string>
     <string name="botonIzq">Button</string>
     <string name="botonDer">Button</string>
     <string name="nombre">Name</string>

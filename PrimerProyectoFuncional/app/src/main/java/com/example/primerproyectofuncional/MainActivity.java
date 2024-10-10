@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toolbar;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
+        Toolbar toolbar = findViewById(R.id.toolbar);
+
         // Inicializa las vistas
         botonIzquierda = findViewById(R.id.botonIzq);
         botonDerecha = findViewById(R.id.botonDer);
@@ -35,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         nombre = findViewById(R.id.nombre);
 
         // Crea una instancia del Controlador, pasándole las vistas necesarias
-        controlador = new Controlador(mostrarNombre, nombre);
+        controlador = new Controlador(this);
 
         // Asigna el controlador a los botones
         botonIzquierda.setOnClickListener(controlador);
