@@ -1,0 +1,3 @@
+Codigo: 210 Nombre: Gregorio Marañón Direccion: C. Dr. Esquerdo, 46 Camas: 1671 Presupuesto: 2252257.54
+Codigo: 315 Nombre: HM Hospital Universitario Direccion: Pl. del Conde del Valle de Súchil, Camas: 1312 Presupuesto: 3253254.78
+Codigo: 250 Nombre: 12 de Octubre Direccion: Av. de Córdoba, s/n Camas: 1296 Presupuesto: 5.254254787E7

@@ -13,10 +13,12 @@ import java.util.ArrayList;
 
 public class CalculadoraArreglada extends Frame {
 
+    Double memoria;
     TextField texto = new TextField();
     ArrayList<String> calculo = new ArrayList<>();
 
-    public CalculadoraArreglada() {
+    public CalculadoraArreglada() throws NumberFormatException {
+
         setLayout(new BorderLayout());
 
         // DECLARACIÓN PANELES
@@ -64,9 +66,10 @@ public class CalculadoraArreglada extends Frame {
                         case "":
                             break;
                         case "Backspace":
+                            backspace();
                             break;
                         case "CE":
-                            texto.setText("");
+                            CE();
                             break;
                         case "C":
                             texto.setText("");
@@ -98,7 +101,7 @@ public class CalculadoraArreglada extends Frame {
                             texto.setText(texto.getText() + "/");
                             break;
                         case "sqrt":
-                            texto.setText(texto.getText() + "7");
+                            texto.setText(texto.getText() + "sqrt");
                             break;
                         case "4":
                             texto.setText(texto.getText() + "4");
@@ -113,7 +116,7 @@ public class CalculadoraArreglada extends Frame {
                             texto.setText(texto.getText() + "*");
                             break;
                         case "%":
-                            texto.setText(texto.getText() + "");
+                            texto.setText(texto.getText() + "%");
                             break;
                         case "1":
                             texto.setText(texto.getText() + "1");
@@ -125,19 +128,19 @@ public class CalculadoraArreglada extends Frame {
                             texto.setText(texto.getText() + "3");
                             break;
                         case "-":
-                            texto.setText(texto.getText() + "");
+                            texto.setText(texto.getText() + "-");
                             break;
                         case "1/x":
-                            texto.setText(texto.getText() + "7");
+                            texto.setText(texto.getText() + "1/x");
                             break;
                         case "0":
                             texto.setText(texto.getText() + "0");
                             break;
                         case "+/-":
-                            texto.setText(texto.getText() + "7");
+                            texto.setText(texto.getText() + "+/-");
                             break;
                         case ".":
-                            texto.setText(texto.getText() + "");
+                            texto.setText(texto.getText() + ".");
                             break;
                         case "+":
                             calculo.add("+");
@@ -160,9 +163,17 @@ public class CalculadoraArreglada extends Frame {
                 public void actionPerformed(ActionEvent e) {
                     switch (boton) {
                         case "MC":
+                            guardarMemoria();
+                            break;
                         case "MR":
+                            MR();
+                            break;
                         case "MS":
+                            MS();
+                            break;
                         case "M+":
+                            Msumar();
+                            break;
                     }
                 }
             }
@@ -184,31 +195,138 @@ public class CalculadoraArreglada extends Frame {
 
     }
 
-    public double calcular() {
-        String textoCalcular = texto.getText().trim();
+    public void CE() throws NumberFormatException {
         double numerin1 = 0;
         double numerin2 = 0;
-        for (String tipoCalculo : calculo) {
-            if (tipoCalculo.contains("+")) {
-        String[] digitos = textoCalcular.split("\\+");
-        for (String numero : digitos) {
-            int contador = 0;
-            if (contador == 0) {
-                numerin1 = Double.parseDouble(numero);
-            } else if (contador == 1) {
-                numerin2 = Double.parseDouble(numero);
-            }
+        try {
+            String textoCalcular = texto.getText().trim();
 
-        }
-                double resultado = numerin1 + numerin2;
-                return resultado;
+            if (textoCalcular.contains("+")) {
+                try {
+                    String[] digitos = textoCalcular.split("\\+");
+                    numerin1 = Double.parseDouble(digitos[0]);
+                    texto.setText(numerin1 + " + ");
+                } catch (NumberFormatException e) {
+                    System.out.println("Error");
+                }
+            } else if (textoCalcular.contains("-")) {
+                try {
+                    String[] digitos = textoCalcular.split("\\-");
+                    numerin1 = Double.parseDouble(digitos[0]);
+                    texto.setText(numerin1 + " - ");
+                } catch (NumberFormatException e) {
+                    System.out.println("Error");
+                }
+            } else if (textoCalcular.contains("*")) {
+                try {
+                    String[] digitos = textoCalcular.split("\\*");
+                    numerin1 = Double.parseDouble(digitos[0]);
+                    texto.setText(numerin1 + " * ");
+                } catch (NumberFormatException e) {
+                    System.out.println("Error");
+                }
+            } else if (textoCalcular.contains("/")) {
+                try {
+                    String[] digitos = textoCalcular.split("\\/");
+                    numerin1 = Double.parseDouble(digitos[0]);
+                    texto.setText(numerin1 + " / ");
+                } catch (NumberFormatException e) {
+                    System.out.println("Error");
+                }
             }
-            if (tipoCalculo.contains(-))
+        } catch (StringIndexOutOfBoundsException e) {
+            System.out.println("No hay nada que borrar");
+
         }
     }
 
-    public static void main(String[] args) {
-        CalculadoraArreglada mainframe = new CalculadoraArreglada();
+    public void backspace() throws NumberFormatException {
+        try {
+            String txt = texto.getText();
+            txt = txt.substring(0, txt.length() - 1);
+            texto.setText(txt);
+        } catch (StringIndexOutOfBoundsException e) {
+            System.out.println("No hay nada que borrar");
 
+        }
     }
+
+    public void guardarMemoria() throws NumberFormatException {
+        String txt = texto.getText().trim();
+        memoria = Double.parseDouble(txt);
+        texto.setText("");
+    }
+
+    public void MR() throws NumberFormatException {
+        if (memoria != null) {
+            String txt = texto.getText().trim();
+            texto.setText(txt + memoria);
+        } else {
+            System.out.println("No hay memoria");
+        }
+    }
+
+    public void Msumar() {
+        try {
+            if (memoria != null) {
+                String txt = texto.getText().trim();
+                Double txtDouble = Double.parseDouble(txt);
+                texto.setText(txtDouble + memoria + "");
+            } else {
+                System.out.println("No hay memoria");
+            }
+        } catch (NumberFormatException e) {
+            System.out.println("Error");
+        }
+    }
+
+    public void MS() throws NumberFormatException {
+        String txt = texto.getText().trim();
+        texto.setText(txt + memoria + "");
+    }
+
+    public void MC() throws NumberFormatException {
+        memoria = null;
+    }
+
+    public void calcular() throws NumberFormatException {
+        try {
+            String textoCalcular = texto.getText().trim();
+            double numerin1 = 0;
+            double numerin2 = 0;
+            double resultado = 0;
+
+            if (textoCalcular.contains("+")) {
+                String[] digitos = textoCalcular.split("\\+");
+                numerin1 = Double.parseDouble(digitos[0]);
+                numerin2 = Double.parseDouble(digitos[1]);
+                resultado = numerin1 + numerin2;
+            } else if (textoCalcular.contains("-")) {
+                String[] digitos = textoCalcular.split("\\-");
+                numerin1 = Double.parseDouble(digitos[0]);
+                numerin2 = Double.parseDouble(digitos[1]);
+                resultado = numerin1 - numerin2;
+            } else if (textoCalcular.contains("*")) {
+                String[] digitos = textoCalcular.split("\\*");
+                numerin1 = Double.parseDouble(digitos[0]);
+                numerin2 = Double.parseDouble(digitos[1]);
+                resultado = numerin1 * numerin2;
+            } else if (textoCalcular.contains("/")) {
+                String[] digitos = textoCalcular.split("\\/");
+                numerin1 = Double.parseDouble(digitos[0]);
+                numerin2 = Double.parseDouble(digitos[1]);
+                if (numerin2 != 0) {
+                    resultado = numerin1 / numerin2;
+                } else {
+                    texto.setText("Error: División por cero");
+                }
+            }
+
+            // Se actualiza el resultado en el TextField
+            texto.setText(Double.toString(resultado));
+        } catch (NumberFormatException e) {
+            System.out.println("Error");
+        }
+    }
+
 }
