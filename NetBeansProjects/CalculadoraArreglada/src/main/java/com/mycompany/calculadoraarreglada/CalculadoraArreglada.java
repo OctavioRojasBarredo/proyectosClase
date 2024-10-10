@@ -252,9 +252,13 @@ public class CalculadoraArreglada extends Frame {
     }
 
     public void guardarMemoria() throws NumberFormatException {
+        try {
         String txt = texto.getText().trim();
         memoria = Double.parseDouble(txt);
         texto.setText("");
+        } catch (NumberFormatException e) {
+            System.out.println("Error");
+        }
     }
 
     public void MR() throws NumberFormatException {
