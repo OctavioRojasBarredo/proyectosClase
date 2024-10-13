@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">NotaMedia</string>
+    <string name="nombre">Nombre:</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="notas">NOTAS:</string>
+    <string name="di">DI</string>
+    <string name="pm">PM</string>
+    <string name="ad">AD</string>
+    <string name="validar">Validar</string>
+</resources>
