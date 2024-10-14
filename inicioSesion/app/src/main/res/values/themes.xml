@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.InicioSesion" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/Blue</item>
+    </style>
+
+    <style name="Theme.InicioSesion" parent="Base.Theme.InicioSesion" />
+</resources>
