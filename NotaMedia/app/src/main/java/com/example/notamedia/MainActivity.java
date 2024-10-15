@@ -45,16 +45,23 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
-    public EditText getNombre()  {
+    public EditText getNombreEditText()  {
         return nombre;
+    }
+
+    public String getNombre()  {
+        return nombre.getText().toString();
     }
 
     public Button getBoton()  {
         return validar;
     }
 
-    public EditText getApellidos()  {
+    public String getApellidos()  {
+        return apellidos.getText().toString();
+    }
+
+    public EditText getApellidosEditText()  {
         return apellidos;
     }
 }
