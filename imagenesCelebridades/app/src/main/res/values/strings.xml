@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">imagenesCelebridades</string>
+    <string name="albert">Saludos! Soy Albert Einstein</string>
+    <string name="obama">OBAMA</string>
+    <string name="rafa">RAFA</string>
+    <string name="penelope">PENELOPE</string>
+    <string name="will">WILL</string>
 </resources>
