@@ -44,6 +44,6 @@ public class Controlador implements View.OnClickListener {
         return activity.getApellidos();
     }
 
-    setTextColor(ContextCompat.getColor(this, color));
+
 
 }
