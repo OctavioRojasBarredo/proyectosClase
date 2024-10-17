@@ -20,6 +20,18 @@
         app:layout_constraintVertical_bias="0.214" />
 
     <TextView
+        android:id="@+id/media"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/media"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.136" />
+
+    <TextView
         android:id="@+id/apellidos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -99,6 +111,7 @@
         android:background="@color/azul"
         android:ems="10"
         android:inputType="text"
+        android:textColor="@color/amarillo"
         android:hint="@string/nombre"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -114,6 +127,7 @@
         android:background="@color/azul"
         android:ems="10"
         android:inputType="text"
+        android:textColor="@color/amarillo"
         android:hint="@string/apellidos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -123,7 +137,7 @@
         app:layout_constraintVertical_bias="0.292" />
 
     <EditText
-        android:id="@+id/introducirApellidos2"
+        android:id="@+id/nota1"
         android:layout_width="58dp"
         android:layout_height="42dp"
         android:ems="10"
@@ -136,7 +150,7 @@
         app:layout_constraintVertical_bias="0.632" />
 
     <EditText
-        android:id="@+id/introducirApellidos3"
+        android:id="@+id/nota2"
         android:layout_width="58dp"
         android:layout_height="42dp"
         android:ems="10"
@@ -149,7 +163,7 @@
         app:layout_constraintVertical_bias="0.714" />
 
     <EditText
-        android:id="@+id/introducirApellidos4"
+        android:id="@+id/nota3"
         android:layout_width="58dp"
         android:layout_height="42dp"
         android:ems="10"
