@@ -11,7 +11,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/rafaMensaje"
+        android:text="@string/willMensaje"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,7 +58,7 @@
         android:id="@+id/will"
         android:layout_width="402dp"
         android:layout_height="40dp"
-        android:text="@string/will"
+        android:text="@string/rafa"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.444"
@@ -67,11 +67,11 @@
         app:layout_constraintVertical_bias="0.929" />
 
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="187dp"
-        android:layout_height="373dp"
-        app:srcCompat="@drawable/rafa"
-        tools:layout_editor_absoluteX="112dp"
+        android:id="@+id/imageView5"
+        android:layout_width="208dp"
+        android:layout_height="350dp"
+        app:srcCompat="@drawable/will"
+        tools:layout_editor_absoluteX="110dp"
         tools:layout_editor_absoluteY="175dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
