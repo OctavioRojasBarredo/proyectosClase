@@ -20,7 +20,7 @@
         app:layout_constraintVertical_bias="0.219" />
 
     <Button
-        android:id="@+id/obama"
+        android:id="@+id/einstein"
         android:layout_width="402dp"
         android:layout_height="40dp"
         android:text="@string/einstein"
