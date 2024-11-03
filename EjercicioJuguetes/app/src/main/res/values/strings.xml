@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">EjercicioJuguetes</string>
+    <string name="juguetes">Juguetes</string>
+    <string name="descripcion">Descripción</string>
+    <string name="tipo">Tipo</string>
+    <string name="cantidad">Cantidad</string>
+    <string name="nombre_del_producto">Nombre del producto</string>
+    <string name="anadir">+ AÑADIR</string>
+    <string name="mostrar"><![CDATA[--> MOSTRAR]]></string>
+    <string name="grid_view">GRID VIEW</string>
+    <string name="list_view">LIST VIEW</string>
+</resources>
